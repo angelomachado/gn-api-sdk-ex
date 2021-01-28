@@ -2,7 +2,7 @@ defmodule Gerencianet.Endpoints do
   @urls Gerencianet.Constants.url()
   @sandbox true
   @endpoints Gerencianet.Constants.endpoints()
-  
+
   @endpoints
     |> Map.keys
     |> Enum.map(fn endpoint ->
@@ -26,7 +26,7 @@ defmodule Gerencianet.Endpoints do
     do
       {:ok, %HTTPoison.Response{body: _, headers: _, status_code: 401}} ->
         authenticate()
-        make_request(params, body, settings)
+        create_request(params, body, settings)
       {:ok, response} ->
         Poison.decode!(response.body)
     end
