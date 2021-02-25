@@ -147,12 +147,12 @@ defmodule Gerencianet.Constants do
       method: "post"
     },
     settle_charge: %{
-      route: '/charge/:id/settle',
-      method: 'put'
+      route: "/charge/:id/settle",
+      method: "put"
     },
     settle_carnet_parcel: %{
-      route: '/carnet/:id/parcel/:parcel/settle',
-      method: 'put'
+      route: "/carnet/:id/parcel/:parcel/settle",
+      method: "put"
    }
   }
   def endpoints, do: @endpoints
